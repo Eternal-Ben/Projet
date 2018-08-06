@@ -26,17 +26,45 @@ namespace Exo_lsit
     {
         static void Main(string[] args)
         {
+        // point d'entree generique ; passe les var general à reuse dans les differentes methode
+            int[] scores = new int[4] { 97, 92, 81, 60 };
+            ListesScores(scores);
+            OrdreScores(scores);
         }
-        public static void ListesScores(int[] args)
+        // synt de requete
+        public static void ListesScores(int [] scores)
         {
-            int[] scores = new int[] { 97, 92, 81, 60 };
-            var requete = from score in scores in ListesScores
-                          where(score > 80) == 0
-                          select score;
+            var numQuery = from score in scores
+                           where score > 80
+                           select score;
+            foreach (int score in numQuery)
+            {
+                Console.WriteLine(":"+ score);
+            }
 
-            Console.ReadLine();
 
         }
+        // exo 1/2
+        public static void OrdreScores(int[] scores)
+        {
+            var numQuery = from score in scores
+                           orderby score ascending
+                           select score;
+
+            foreach (int score in numQuery)
+            {
+                Console.WriteLine(":" + score);
+            }
+
+
+        }
+
+        // synt de methode
+        //      public static void ListeDesScore2 ()
+        //      {
+        //         var requete2 = score
+        //              .Order
+        //      }
 
     }
 }

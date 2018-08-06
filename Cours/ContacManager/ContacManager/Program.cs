@@ -372,6 +372,34 @@ namespace ContacManager
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Bienvenu dans votre gestionnaire de contact");
+            Console.WriteLine("Menu");
+//            Console.WriteLine("1 * Liste de vos contacts");
+//            Console.WriteLine("2 * Ajout d'un contact dans votre repertoir");
+//            Console.WriteLine("3 * Suprimer un contact de votre repertoir");
+//            Console.WriteLine("4 * Quitter");
+
         }
+        static void ListeContacts()
+        {
+            Console.WriteLine("1 * Liste de vos contacts");
+//           creation d'une liste
+        }
+        static void AjoutContact()
+        {
+            Console.WriteLine("2 * Ajout d'un contact dans votre repertoir");
+            Console.ReadLine();
+        }
+        static void SupressionContact()
+        {
+            Console.WriteLine("3 * Suprimer un contact de votre repertoir");
+            Console.ReadLine();
+        }
+        static void Quitter()
+        {
+            Console.WriteLine("4 * Quitter");
+// revenir ensuite au Choix du menu
+        }
+
     }
 }

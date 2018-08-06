@@ -10,7 +10,17 @@ L'application propose un menu avec 4 options :
 > Faire une méthode pour l'affichage du menue et chacune des 3 premières options.
 
 Taf au dom, voir les listes/voir les switch cases/et les get - set... voir si plus necessaire
-            
+  
+* Ecrire une classe statique OutilsConsole qui contient les methodes suivantes :
+> SaisirEntierObligatoire
+> SaisirEntier
+> SaisireChaineObligatoire
+> SaisirDate
+> SaisirDateObligatoire
+
+* Modif l'app pour utiliser ces nouvelles méthodes
+(Astuce) Pensez à use les methodes TryParse...
+
 ------------------------
  Version du Prof :
  using System;

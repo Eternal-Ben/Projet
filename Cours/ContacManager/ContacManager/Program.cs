@@ -467,7 +467,7 @@ namespace ContactManager
                         break;
 
                     case "5":
-                       // FiltrerContact();
+                        // FiltrerContact();
                         break;
 
                     // Mod le choix pr qu'il corresponde à "Q" et plus à "4"
@@ -538,9 +538,9 @@ namespace ContactManager
             OutilsConsole.AfficherMessageInconnu
             var choixTri = Console.ReadLine();
             byte tri;
-            while (!byte.TryParse(saisie, out tri)&& (tri <1||tri>2))
+            while (!byte.TryParse(saisie, out tri) && (tri < 1 || tri > 2))
 
-            Console.WriteLine("TRIER CONTACT\n");
+                Console.WriteLine("TRIER CONTACT\n");
 
             Console.WriteLine("Par nom:");
             var contact = Console.ReadLine();
@@ -579,5 +579,24 @@ namespace ContactManager
             Console.WriteLine("\nAppuie sur une touche pour revenir au menu...");
             Console.ReadKey();
         }
+/*
+ * Implementer dans l'app le chargement/sauvegarde de la liste des contacts dans un fichier texte
+ * (astuce) use la methode Split de la classe string pour decouper une chaine selon un caractere separateur.
+ * (astuce) us la methode Join de la classe pour assembler une chaine de caratct separateur
+ * (astuce) pour construire le contenue du fichier, use la classe String.Builder (nameSpace System.text)
+         */
+        class Fichier (contacts)
+        {
+            var cheminFichier = @"C:\Temps\\PARME31\partage\ListeContacts.doc";
+                if (!File.Existes(cheminFichier))
+                    {
+                        File.Create(cheminFichier)
+                    }
+                else 
+                    {
+                    var contenuFichier = new StringBuilder();
+                    foreach (var contact in contacts)
+
+        //>>> Ca marche pour la logique, mais manque la suite avec Split et Join revoir
     }
 }
